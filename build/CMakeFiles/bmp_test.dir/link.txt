@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o -o bmp_test  libcanvas.a deps/external/glfw/src/libglfw3.a /usr/lib/librt.a -lm -ldl deps/external/glad/libglad.a 

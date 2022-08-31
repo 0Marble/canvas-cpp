@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcanvas.a CMakeFiles/canvas.dir/src/backgrounds.cpp.o CMakeFiles/canvas.dir/src/bmpcanvas.cpp.o CMakeFiles/canvas.dir/src/canvas.cpp.o CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o CMakeFiles/canvas.dir/src/geometry.cpp.o CMakeFiles/canvas.dir/src/windowcanvas.cpp.o
+/usr/bin/ranlib libcanvas.a

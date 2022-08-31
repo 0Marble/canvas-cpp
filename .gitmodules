@@ -1,0 +1,6 @@
+[submodule "deps/external/glfw"]
+	path = deps/external/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "deps/external/glad"]
+	path = deps/external/glad
+	url = https://github.com/Dav1dde/glad.git
