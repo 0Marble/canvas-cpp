@@ -4,3 +4,9 @@
 [submodule "deps/external/gl3w"]
 	path = deps/external/gl3w
 	url = https://github.com/skaslev/gl3w.git
+[submodule "deps/glfw"]
+	path = deps/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "deps/gl3w"]
+	path = deps/gl3w
+	url = https://github.com/skaslev/gl3w.git
