@@ -92,21 +92,6 @@ void FrameBufferCanvas::blend_pixel(uint32_t x, uint32_t y, Rgba color) {
   set_pixel(x, y, blend(color, get_pixel(x, y)));
 }
 
-void FrameBufferCanvas::draw_background() {
-  for (uint32_t x = 0; x < width; x++) {
-    for (uint32_t y = 0; y < height; y++) {
-      Vec2 world_coords =
-          Viewport::convert(pixel_viewport(), viewport, Vec2(x, y));
-      if (background.has_value()) {
-        set_pixel(x, y,
-                  background.value()->color(world_coords.x, world_coords.y));
-      } else {
-        set_pixel(x, y, NONE);
-      }
-    }
-  }
-}
-
 void FrameBufferCanvas::floodfill(float x, float y, Rgba color) {
   Vec2 pixel = Viewport::convert(viewport, pixel_viewport(), Vec2(x, y));
   floodfill(uint32_t(pixel.x), uint32_t(pixel.y), color);
@@ -209,7 +194,7 @@ void FrameBufferCanvas::draw_primitive(const Triangle& p) {
 
   BmpCanvas tri =
       BmpCanvas(tri_pixels.right - tri_pixels.left + 1,
-                tri_pixels.top - tri_pixels.bottom + 1, "", tri_pixels);
+                tri_pixels.top - tri_pixels.bottom + 1, "", tri_pixels, NONE);
 
   tri.draw_pixel_triangle(
       points[0].x - tri_pixels.left, points[0].y - tri_pixels.bottom,

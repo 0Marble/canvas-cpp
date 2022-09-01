@@ -6,7 +6,6 @@ WindowCanvas::WindowCanvas(std::shared_ptr<WindowHandler>&& handler,
                            Viewport viewport)
     : Canvas(viewport), handler(handler) {}
 
-bool WindowCanvas::has_quit() const { return quit; }
 void WindowCanvas::stop() { quit = true; }
 
 void WindowCanvas::update() {
@@ -19,5 +18,7 @@ void WindowCanvas::update() {
 
   handler->on_update(*this);
 }
+
+bool WindowCanvas::has_quit() const { return quit; }
 
 }  // namespace Canvas

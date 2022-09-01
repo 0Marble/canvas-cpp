@@ -127,6 +127,7 @@ void GLFWCanvas::error_callback(int error, const char* error_message) {
 
 void GLFWCanvas::set_viewport(Viewport new_viewport) {
   float near = 0.0f, far = 1.0f;
+  WindowCanvas::set_viewport(new_viewport);
 
   mvp[0] = 2.0f / (viewport.right - viewport.left);
   mvp[1] = 0.0f;
@@ -154,8 +155,6 @@ void GLFWCanvas::set_viewport(Viewport new_viewport) {
   GL_CALL(glUniformMatrix4fv(umvps[CIRCLE], 1, GL_FALSE, mvp.data()));
   GL_CALL(glUseProgram(shaders[THICK_LINE]));
   GL_CALL(glUniformMatrix4fv(umvps[THICK_LINE], 1, GL_FALSE, mvp.data()));
-
-  WindowCanvas::set_viewport(viewport);
 }
 
 GLFWCanvas::GLFWCanvas(uint32_t width, uint32_t height,
@@ -165,13 +164,15 @@ GLFWCanvas::GLFWCanvas(uint32_t width, uint32_t height,
     : WindowCanvas(std::move(handler), viewport), width(width), height(height) {
   ASSERT(glfwInit(), == true);
   glfwSetErrorCallback(GLFWCanvas::error_callback);
-  ASSERT((window =
-              glfwCreateWindow(width, height, title.data(), nullptr, nullptr)),
-         != nullptr);
 
   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
+  glfwWindowHint(GLFW_SAMPLES, 4);
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+  ASSERT((window =
+              glfwCreateWindow(width, height, title.data(), nullptr, nullptr)),
+         != nullptr);
 
   glfwMakeContextCurrent(window);
   glfwSwapInterval(1);
@@ -183,6 +184,8 @@ GLFWCanvas::GLFWCanvas(uint32_t width, uint32_t height,
 
   glfwSetWindowUserPointer(window, this);
   set_event_callbacks();
+
+  GL_CALL(glEnable(GL_MULTISAMPLE));
 
   GL_CALL(glGenVertexArrays(4, vaos.data()));
   GL_CALL(glGenBuffers(4, vbos.data()));
@@ -250,7 +253,7 @@ GLFWCanvas::~GLFWCanvas() {
 }
 
 void GLFWCanvas::display() {
-  while (!glfwWindowShouldClose(window)) {
+  while (!glfwWindowShouldClose(window) && !has_quit()) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     update();
     glfwSwapBuffers(window);
@@ -320,5 +323,4 @@ void GLFWCanvas::draw_primitive(const Triangle& p) {
                        GL_DYNAMIC_DRAW));
   GL_CALL(glDrawArrays(GL_TRIANGLES, 0, pts.size() / 2));
 }
-void GLFWCanvas::draw_background() {}
 }  // namespace Canvas

@@ -6,10 +6,6 @@ Canvas::Canvas(Viewport viewport) : viewport(viewport) {}
 
 const Viewport& Canvas::get_viewport() const { return viewport; };
 void Canvas::set_viewport(Viewport new_viewport) { viewport = new_viewport; };
-void Canvas::set_background(std::shared_ptr<Background>&& new_background) {
-  background = new_background;
-};
-void Canvas::clear_background() { background = {}; };
 
 void Canvas::add_line(float x1, float y1, float x2, float y2, Rgba color,
                       float thickness) {
@@ -30,8 +26,6 @@ void Canvas::add_triangle(Vec2 p1, Vec2 p2, Vec2 p3, Rgba color) {
 void Canvas::clear_primitives() { primitives.clear(); }
 
 void Canvas::update() {
-  draw_background();
-
   for (const auto& p : primitives) {
     switch (p.index()) {
       case 0:

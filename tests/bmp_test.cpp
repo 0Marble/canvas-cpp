@@ -8,8 +8,7 @@ using namespace Canvas;
 int main() {
   BmpCanvas img(
       500, 500, "canvas.bmp",
-      Viewport{.top = 5.0, .bottom = -5.0, .left = -5.0, .right = 5.0});
-  img.set_background(std::make_shared<GraphingPaperBackground>(0.05, 0.05));
+      Viewport{.top = 5.0, .bottom = -5.0, .left = -5.0, .right = 5.0}, WHITE);
 
   for (float t = 0.0; t <= 2.0 * M_PI; t += 0.1) {
     img.add_line(0.0, 0.0, std::cos(t), std::sin(t), RED, 0.0);

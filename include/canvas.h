@@ -10,7 +10,6 @@
 #include <variant>
 #include <vector>
 
-#include "background.h"
 #include "geometry.h"
 #include "windowhandler.h"
 
@@ -72,13 +71,11 @@ namespace Canvas {
 class Canvas {
  protected:
   std::list<std::variant<Line, Circle, Triangle>> primitives;
-  std::optional<std::shared_ptr<Background>> background;
   Viewport viewport;
 
   virtual void draw_primitive(const Line& l) = 0;
   virtual void draw_primitive(const Circle& c) = 0;
   virtual void draw_primitive(const Triangle& p) = 0;
-  virtual void draw_background() = 0;
 
   virtual Rgba blend(const Rgba& top, const Rgba& bottom) const;
 
@@ -89,8 +86,6 @@ class Canvas {
 
   virtual const Viewport& get_viewport() const;
   virtual void set_viewport(Viewport new_viewport);
-  virtual void set_background(std::shared_ptr<Background>&& new_background);
-  virtual void clear_background();
 
   virtual void add_line(float x1, float y1, float x2, float y2, Rgba color,
                         float thickness);
@@ -113,7 +108,6 @@ class FrameBufferCanvas : public Canvas {
   virtual void draw_primitive(const Line& l) override;
   virtual void draw_primitive(const Circle& c) override;
   virtual void draw_primitive(const Triangle& p) override;
-  virtual void draw_background() override;
 
   Viewport pixel_viewport() const;
   void draw_pixel_line(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2,
@@ -156,7 +150,7 @@ class BmpCanvas : public FrameBufferCanvas {
  public:
   BmpCanvas() = delete;
   BmpCanvas(uint32_t width, uint32_t height, const std::string& file_path,
-            Viewport viewport);
+            Viewport viewport, Rgba background_color);
   virtual ~BmpCanvas() {}
 
   virtual void set_pixel(uint32_t x, uint32_t y, Rgba color) override;
@@ -182,7 +176,7 @@ class WindowCanvas : public Canvas {
   virtual ~WindowCanvas() {}
 
   virtual void stop();
-  virtual bool has_quit() const;
+  bool has_quit() const;
   virtual void update() override;
 };
 
@@ -200,7 +194,6 @@ class GLFWCanvas : public WindowCanvas {
   virtual void draw_primitive(const Line& l) override;
   virtual void draw_primitive(const Circle& c) override;
   virtual void draw_primitive(const Triangle& p) override;
-  virtual void draw_background() override;
 
   virtual void set_event_callbacks();
   virtual uint32_t load_shader(const char* vert_source,

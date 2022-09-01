@@ -5,10 +5,11 @@
 namespace Canvas {
 
 BmpCanvas::BmpCanvas(uint32_t width, uint32_t height,
-                     const std::string& file_path, Viewport viewport)
+                     const std::string& file_path, Viewport viewport,
+                     Rgba background_color)
     : FrameBufferCanvas(width, height, viewport),
       file_path(file_path),
-      pixels(width * height, NONE) {}
+      pixels(width * height, background_color) {}
 
 void BmpCanvas::set_pixel(uint32_t x, uint32_t y, Rgba color) {
   INDEX_SET(pixels, y * width + x, color);
