@@ -53,9 +53,11 @@ void GLFWCanvas::set_event_callbacks() {
   glfwSetWindowSizeCallback(
       window, [](GLFWwindow* window, int width, int height) {
         auto self = static_cast<GLFWCanvas*>(glfwGetWindowUserPointer(window));
-        self->width = width;
-        self->height = height;
         GL_CALL(glViewport(0, 0, width, height));
+        self->event_queue.push_front(WindowResizeEvent{
+            .new_width = (uint32_t)width,
+            .new_height = (uint32_t)height,
+        });
       });
 }
 
