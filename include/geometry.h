@@ -13,7 +13,7 @@ class Vec2 {
  public:
   float x = 0.0f, y = 0.0f;
   Vec2(float x, float y);
-  Vec2(float t);
+  explicit Vec2(float t);
   virtual ~Vec2(){};
 
   Vec2 operator+(const Vec2& other) const;

@@ -17,37 +17,48 @@
 #define CANVAS_DEBUG
 
 #ifdef CANVAS_DEBUG
-#define INDEX_GET(res, vec, index)                                   \
-  {                                                                  \
-    size_t computed_index = y * width + x;                           \
-    if (computed_index >= pixels.size()) {                           \
-      std::cerr << __func__ << "@" __FILE__ ":" << __LINE__          \
-                << " About to segfault! Index is " << computed_index \
-                << ", size is " << pixels.size() << "\n";            \
-      __builtin_trap();                                              \
-    }                                                                \
-    res = pixels[computed_index];                                    \
+
+#define WHERE __func__ << " @ " __FILE__ ":" << __LINE__
+#define DEBUG_BREAK __builtin_trap();
+
+#define INDEX_GET(res, vec, index)                                            \
+  {                                                                           \
+    size_t computed_index = y * width + x;                                    \
+    if (computed_index >= pixels.size()) {                                    \
+      std::cerr << WHERE << " About to segfault! Index is " << computed_index \
+                << ", size is " << pixels.size() << "\n";                     \
+      DEBUG_BREAK;                                                            \
+    }                                                                         \
+    res = pixels[computed_index];                                             \
   }
 
-#define INDEX_SET(vec, index, value)                                 \
-  {                                                                  \
-    size_t computed_index = y * width + x;                           \
-    if (computed_index >= pixels.size()) {                           \
-      std::cerr << __func__ << "@" __FILE__ ":" << __LINE__          \
-                << " About to segfault! Index is " << computed_index \
-                << ", size is " << pixels.size() << "\n";            \
-      __builtin_trap();                                              \
-    }                                                                \
-    pixels[computed_index] = value;                                  \
+#define INDEX_SET(vec, index, value)                                          \
+  {                                                                           \
+    size_t computed_index = y * width + x;                                    \
+    if (computed_index >= pixels.size()) {                                    \
+      std::cerr << WHERE << " About to segfault! Index is " << computed_index \
+                << ", size is " << pixels.size() << "\n";                     \
+      DEBUG_BREAK;                                                            \
+    }                                                                         \
+    pixels[computed_index] = value;                                           \
   }
 
-#define UNWRAP(var, into)                                 \
-  if (!var.has_value()) {                                 \
-    std::cerr << __func__ << "@" __FILE__ ":" << __LINE__ \
-              << " Unwrapping an empty variant\n";        \
-    __builtin_trap();                                     \
-  } else {                                                \
-    into = var.value();                                   \
+#define UNWRAP(var, into)                                   \
+  if (!var.has_value()) {                                   \
+    std::cerr << WHERE << " Unwrapping an empty variant\n"; \
+    DEBUG_BREAK;                                            \
+  } else {                                                  \
+    into = var.value();                                     \
+  }
+
+#define ASSERT(expr, pass_condition)                 \
+  {                                                  \
+    if (!((expr)pass_condition)) {                   \
+      std::cerr << WHERE                             \
+                << " "                               \
+                   "!(" #expr #pass_condition ")\n"; \
+      DEBUG_BREAK;                                   \
+    }                                                \
   }
 
 #else
@@ -81,8 +92,6 @@ class Canvas {
   virtual void set_background(std::shared_ptr<Background>&& new_background);
   virtual void clear_background();
 
-  virtual std::optional<Rgba> sample(float x, float y) const = 0;
-
   virtual void add_line(float x1, float y1, float x2, float y2, Rgba color,
                         float thickness);
   virtual void add_circle(float x, float y, float radius, Rgba color);
@@ -92,8 +101,6 @@ class Canvas {
   virtual void add_connected_points(
       const std::vector<std::pair<float, float>>& pts, Rgba color,
       float thickness);
-
-  virtual void blit_canvas(const Canvas& other, Viewport location) = 0;
 
   virtual void update();
   virtual void display() = 0;
@@ -130,7 +137,7 @@ class FrameBufferCanvas : public Canvas {
   FrameBufferCanvas(uint32_t width, uint32_t height, Viewport viewport);
   virtual ~FrameBufferCanvas(){};
 
-  virtual std::optional<Rgba> sample(float x, float y) const override;
+  virtual std::optional<Rgba> sample(float x, float y) const;
   virtual void blend_pixel(uint32_t x, uint32_t y, Rgba color);
   virtual Rgba get_pixel(uint32_t x, uint32_t y) const = 0;
   virtual void set_pixel(uint32_t x, uint32_t y, Rgba color) = 0;
@@ -138,7 +145,6 @@ class FrameBufferCanvas : public Canvas {
   virtual void floodfill(uint32_t x, uint32_t y, Rgba color);
   virtual void floodfill(float x, float y, Rgba color);
 
-  virtual void blit_canvas(const Canvas& other, Viewport location) override;
   virtual void blit_canvas(const FrameBufferCanvas& other, Viewport location);
 };
 
@@ -180,11 +186,49 @@ class WindowCanvas : public Canvas {
   virtual void update() override;
 };
 
-#ifdef USE_GLFW
+#include <GL/gl3w.h>
+#include <GLFW/glfw3.h>
 
-class GLFWCanvas : public WindowCanvas {};
+#include <cstdio>
 
-#endif
+class GLFWCanvas : public WindowCanvas {
+ protected:
+  static void error_callback(int error, const char* description);
+  GLFWwindow* window;
+  virtual std::optional<Event> next_event() override;
+
+  virtual void draw_primitive(const Line& l) override;
+  virtual void draw_primitive(const Circle& c) override;
+  virtual void draw_primitive(const Triangle& p) override;
+  virtual void draw_background() override;
+
+  virtual void set_event_callbacks();
+  virtual uint32_t load_shader(const char* vert_source,
+                               const char* geometry_source,
+                               const char* frag_source);
+
+  std::list<Event> event_queue;
+
+  std::array<float, 16> mvp = {0};
+  uint32_t width, height;
+
+  static constexpr size_t TRIANGLE = 0, THICK_LINE = 1, THIN_LINE = 2,
+                          CIRCLE = 3;
+
+  std::array<uint32_t, 4> shaders = {0}, vaos = {0}, vbos = {0};
+
+  std::array<int, 4> umvps = {0}, ucolors = {0};
+
+ public:
+  GLFWCanvas() = delete;
+  GLFWCanvas(uint32_t width, uint32_t height, const std::string& title,
+             std::shared_ptr<WindowHandler>&& handler, Viewport viewport);
+  virtual ~GLFWCanvas();
+
+  virtual void set_viewport(Viewport new_viewport) override;
+
+  virtual void display() override;
+};
 
 }  // namespace Canvas
 

@@ -12,8 +12,8 @@ class WindowCanvas;
 
 class WindowHandler {
  public:
-  virtual void on_update(WindowCanvas& canvas) = 0;
-  virtual void process_event(WindowCanvas& canvas, const Event& e) = 0;
+  virtual void on_update(WindowCanvas& canvas);
+  virtual void process_event(WindowCanvas& canvas, const Event& e);
 };
 
 }  // namespace Canvas

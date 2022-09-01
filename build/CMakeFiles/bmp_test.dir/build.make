@@ -73,32 +73,49 @@ CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o: CMakeFiles/bmp_test.dir/flags.make
 CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o: /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/tests/bmp_test.cpp
 CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o: CMakeFiles/bmp_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o -MF CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o.d -o CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/tests/bmp_test.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o -MF CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o.d -o CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/tests/bmp_test.cpp
 
 CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/tests/bmp_test.cpp > CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/tests/bmp_test.cpp > CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.i
 
 CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/tests/bmp_test.cpp -o CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/tests/bmp_test.cpp -o CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.s
+
+CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.o: CMakeFiles/bmp_test.dir/flags.make
+CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.o: deps/external/gl3w/src/gl3w.c
+CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.o: CMakeFiles/bmp_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.o -MF CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.o.d -o CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/deps/external/gl3w/src/gl3w.c
+
+CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.i"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/deps/external/gl3w/src/gl3w.c > CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.i
+
+CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.s"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/deps/external/gl3w/src/gl3w.c -o CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.s
 
 # Object files for target bmp_test
 bmp_test_OBJECTS = \
-"CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o"
+"CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o" \
+"CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.o"
 
 # External object files for target bmp_test
 bmp_test_EXTERNAL_OBJECTS =
 
 bmp_test: CMakeFiles/bmp_test.dir/tests/bmp_test.cpp.o
+bmp_test: CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.o
 bmp_test: CMakeFiles/bmp_test.dir/build.make
 bmp_test: libcanvas.a
 bmp_test: deps/external/glfw/src/libglfw3.a
 bmp_test: /usr/lib/librt.a
 bmp_test: /usr/lib/libm.so
-bmp_test: deps/external/glad/libglad.a
+bmp_test: /usr/lib/libGLU.so
+bmp_test: /usr/lib/libGL.so
 bmp_test: CMakeFiles/bmp_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bmp_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bmp_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bmp_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

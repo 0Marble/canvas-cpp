@@ -1,0 +1,131 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"deps/external/gl3w/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 70,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 103,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "share/gl3w",
+			"paths" : 
+			[
+				"build/deps/external/gl3w/src/gl3w.c"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/gl3w/GL",
+			"paths" : 
+			[
+				"build/deps/external/gl3w/include/GL/gl3w.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include/gl3w/GL",
+			"paths" : 
+			[
+				"build/deps/external/gl3w/include/GL/glcorearb.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "include/gl3w/KHR",
+			"paths" : 
+			[
+				"build/deps/external/gl3w/include/KHR/khrplatform.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "share/gl3w",
+			"paths" : 
+			[
+				"deps/external/gl3w/cmake/gl3w-config.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "share/gl3w",
+			"exportName" : "gl3w-targets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "gl3w::@0ae8e122786c78749d25",
+					"index" : 0
+				}
+			],
+			"paths" : 
+			[
+				"deps/external/gl3w/CMakeFiles/Export/954acfc74f37f71422aa6aba00b24533/gl3w-targets.cmake"
+			],
+			"type" : "export"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "deps/external/gl3w",
+		"source" : "deps/external/gl3w"
+	}
+}

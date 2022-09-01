@@ -11,7 +11,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.24.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.24.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.24.1/CMakeSystem.cmake"
-  "/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/deps/external/glad/CMakeLists.txt"
+  "/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/deps/external/gl3w/CMakeLists.txt"
+  "/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/deps/external/gl3w/cmake/gl3w-config.cmake"
   "/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/deps/external/glfw/CMake/cmake_uninstall.cmake.in"
   "/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/deps/external/glfw/CMake/glfw3.pc.in"
   "/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/deps/external/glfw/CMake/glfw3Config.cmake.in"
@@ -112,11 +113,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake/Modules/FindDoxygen.cmake"
   "/usr/share/cmake/Modules/FindFontconfig.cmake"
   "/usr/share/cmake/Modules/FindFreetype.cmake"
+  "/usr/share/cmake/Modules/FindOpenGL.cmake"
   "/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake/Modules/FindPkgConfig.cmake"
-  "/usr/share/cmake/Modules/FindPython.cmake"
-  "/usr/share/cmake/Modules/FindPython/Support.cmake"
+  "/usr/share/cmake/Modules/FindPythonInterp.cmake"
   "/usr/share/cmake/Modules/FindThreads.cmake"
   "/usr/share/cmake/Modules/FindX11.cmake"
   "/usr/share/cmake/Modules/GNUInstallDirs.cmake"
@@ -152,7 +153,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "deps/external/glfw/CMakeFiles/CMakeDirectoryInformation.cmake"
   "deps/external/glfw/src/glfw3.pc"
   "deps/external/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "deps/external/glad/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "deps/external/gl3w/cmake/gl3w-config.cmake"
+  "deps/external/gl3w/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -163,6 +165,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "deps/external/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "deps/external/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   "deps/external/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake"
-  "deps/external/glad/CMakeFiles/glad-generate-files.dir/DependInfo.cmake"
-  "deps/external/glad/CMakeFiles/glad.dir/DependInfo.cmake"
+  "deps/external/gl3w/CMakeFiles/gl3w_gen.dir/DependInfo.cmake"
   )

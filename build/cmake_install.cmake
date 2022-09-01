@@ -49,7 +49,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/deps/external/glad/cmake_install.cmake")
+  include("/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/deps/external/gl3w/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

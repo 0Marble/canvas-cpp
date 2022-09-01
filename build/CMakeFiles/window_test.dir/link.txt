@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/window_test.dir/tests/window_test.cpp.o -o window_test  libcanvas.a deps/external/glfw/src/libglfw3.a /usr/lib/librt.a -lm -ldl deps/external/glad/libglad.a 
+/usr/bin/g++ CMakeFiles/window_test.dir/tests/window_test.cpp.o CMakeFiles/window_test.dir/deps/external/gl3w/src/gl3w.c.o -o window_test  libcanvas.a deps/external/glfw/src/libglfw3.a /usr/lib/librt.a -lm -ldl /usr/lib/libGLU.so /usr/lib/libGL.so 

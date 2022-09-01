@@ -148,33 +148,6 @@ void FrameBufferCanvas::floodfill(uint32_t x, uint32_t y, Rgba color) {
   }
 }
 
-void FrameBufferCanvas::blit_canvas(const Canvas& other, Viewport location) {
-  Vec2 pixel_p1 = Viewport::convert(viewport, pixel_viewport(),
-                                    Vec2(location.left, location.bottom));
-  Vec2 pixel_p2 = Viewport::convert(viewport, pixel_viewport(),
-                                    Vec2(location.right, location.top));
-
-  uint32_t min_x = std::clamp(pixel_p1.x, 0.0f, float(width - 1));
-  uint32_t max_x = std::clamp(pixel_p2.x, 0.0f, float(width - 1));
-  uint32_t min_y = std::clamp(pixel_p1.y, 0.0f, float(height - 1));
-  uint32_t max_y = std::clamp(pixel_p2.y, 0.0f, float(height - 1));
-
-  Viewport partial_pixel_viewport = {.top = float(max_y),
-                                     .bottom = float(min_y),
-                                     .left = float(min_x),
-                                     .right = float(max_x)};
-
-  for (uint32_t x = min_x; x <= max_x; x++) {
-    for (uint32_t y = min_y; y <= max_y; y++) {
-      Vec2 other_point = Viewport::convert(partial_pixel_viewport,
-                                           other.get_viewport(), Vec2(x, y));
-      Rgba other_color =
-          other.sample(other_point.x, other_point.y).value_or(Rgba());
-      blend_pixel(x, y, other_color);
-    }
-  }
-}
-
 void FrameBufferCanvas::blit_canvas(const FrameBufferCanvas& other,
                                     Viewport location) {
   Vec2 pixel_p1 = Viewport::convert(viewport, pixel_viewport(),

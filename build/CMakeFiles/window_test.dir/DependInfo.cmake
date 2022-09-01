@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/deps/external/gl3w/src/gl3w.c" "CMakeFiles/window_test.dir/deps/external/gl3w/src/gl3w.c.o" "gcc" "CMakeFiles/window_test.dir/deps/external/gl3w/src/gl3w.c.o.d"
   "/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/tests/window_test.cpp" "CMakeFiles/window_test.dir/tests/window_test.cpp.o" "gcc" "CMakeFiles/window_test.dir/tests/window_test.cpp.o.d"
   )
 
@@ -15,7 +16,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles/canvas.dir/DependInfo.cmake"
   "/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/deps/external/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
-  "/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/deps/external/glad/CMakeFiles/glad.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

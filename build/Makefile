@@ -250,30 +250,47 @@ update_mappings/fast:
 .PHONY : update_mappings/fast
 
 #=============================================================================
-# Target rules for targets named glad-generate-files
+# Target rules for targets named gl3w_gen
 
 # Build rule for target.
-glad-generate-files: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glad-generate-files
-.PHONY : glad-generate-files
+gl3w_gen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gl3w_gen
+.PHONY : gl3w_gen
 
 # fast build rule for target.
-glad-generate-files/fast:
-	$(MAKE) $(MAKESILENT) -f deps/external/glad/CMakeFiles/glad-generate-files.dir/build.make deps/external/glad/CMakeFiles/glad-generate-files.dir/build
-.PHONY : glad-generate-files/fast
+gl3w_gen/fast:
+	$(MAKE) $(MAKESILENT) -f deps/external/gl3w/CMakeFiles/gl3w_gen.dir/build.make deps/external/gl3w/CMakeFiles/gl3w_gen.dir/build
+.PHONY : gl3w_gen/fast
 
-#=============================================================================
-# Target rules for targets named glad
+deps/external/gl3w/src/gl3w.o: deps/external/gl3w/src/gl3w.c.o
+.PHONY : deps/external/gl3w/src/gl3w.o
 
-# Build rule for target.
-glad: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glad
-.PHONY : glad
+# target to build an object file
+deps/external/gl3w/src/gl3w.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canvas.dir/build.make CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/window_test.dir/build.make CMakeFiles/window_test.dir/deps/external/gl3w/src/gl3w.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmp_test.dir/build.make CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.o
+.PHONY : deps/external/gl3w/src/gl3w.c.o
 
-# fast build rule for target.
-glad/fast:
-	$(MAKE) $(MAKESILENT) -f deps/external/glad/CMakeFiles/glad.dir/build.make deps/external/glad/CMakeFiles/glad.dir/build
-.PHONY : glad/fast
+deps/external/gl3w/src/gl3w.i: deps/external/gl3w/src/gl3w.c.i
+.PHONY : deps/external/gl3w/src/gl3w.i
+
+# target to preprocess a source file
+deps/external/gl3w/src/gl3w.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canvas.dir/build.make CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/window_test.dir/build.make CMakeFiles/window_test.dir/deps/external/gl3w/src/gl3w.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmp_test.dir/build.make CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.i
+.PHONY : deps/external/gl3w/src/gl3w.c.i
+
+deps/external/gl3w/src/gl3w.s: deps/external/gl3w/src/gl3w.c.s
+.PHONY : deps/external/gl3w/src/gl3w.s
+
+# target to generate assembly for a file
+deps/external/gl3w/src/gl3w.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canvas.dir/build.make CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/window_test.dir/build.make CMakeFiles/window_test.dir/deps/external/gl3w/src/gl3w.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmp_test.dir/build.make CMakeFiles/bmp_test.dir/deps/external/gl3w/src/gl3w.c.s
+.PHONY : deps/external/gl3w/src/gl3w.c.s
 
 src/backgrounds.o: src/backgrounds.cpp.o
 .PHONY : src/backgrounds.o
@@ -395,6 +412,30 @@ src/geometry.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/canvas.dir/build.make CMakeFiles/canvas.dir/src/geometry.cpp.s
 .PHONY : src/geometry.cpp.s
 
+src/glfwcanvas.o: src/glfwcanvas.cpp.o
+.PHONY : src/glfwcanvas.o
+
+# target to build an object file
+src/glfwcanvas.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canvas.dir/build.make CMakeFiles/canvas.dir/src/glfwcanvas.cpp.o
+.PHONY : src/glfwcanvas.cpp.o
+
+src/glfwcanvas.i: src/glfwcanvas.cpp.i
+.PHONY : src/glfwcanvas.i
+
+# target to preprocess a source file
+src/glfwcanvas.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canvas.dir/build.make CMakeFiles/canvas.dir/src/glfwcanvas.cpp.i
+.PHONY : src/glfwcanvas.cpp.i
+
+src/glfwcanvas.s: src/glfwcanvas.cpp.s
+.PHONY : src/glfwcanvas.s
+
+# target to generate assembly for a file
+src/glfwcanvas.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canvas.dir/build.make CMakeFiles/canvas.dir/src/glfwcanvas.cpp.s
+.PHONY : src/glfwcanvas.cpp.s
+
 src/windowcanvas.o: src/windowcanvas.cpp.o
 .PHONY : src/windowcanvas.o
 
@@ -418,6 +459,30 @@ src/windowcanvas.s: src/windowcanvas.cpp.s
 src/windowcanvas.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/canvas.dir/build.make CMakeFiles/canvas.dir/src/windowcanvas.cpp.s
 .PHONY : src/windowcanvas.cpp.s
+
+src/windowhandler.o: src/windowhandler.cpp.o
+.PHONY : src/windowhandler.o
+
+# target to build an object file
+src/windowhandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canvas.dir/build.make CMakeFiles/canvas.dir/src/windowhandler.cpp.o
+.PHONY : src/windowhandler.cpp.o
+
+src/windowhandler.i: src/windowhandler.cpp.i
+.PHONY : src/windowhandler.i
+
+# target to preprocess a source file
+src/windowhandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canvas.dir/build.make CMakeFiles/canvas.dir/src/windowhandler.cpp.i
+.PHONY : src/windowhandler.cpp.i
+
+src/windowhandler.s: src/windowhandler.cpp.s
+.PHONY : src/windowhandler.s
+
+# target to generate assembly for a file
+src/windowhandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/canvas.dir/build.make CMakeFiles/canvas.dir/src/windowhandler.cpp.s
+.PHONY : src/windowhandler.cpp.s
 
 tests/bmp_test.o: tests/bmp_test.cpp.o
 .PHONY : tests/bmp_test.o
@@ -480,14 +545,16 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... glad-generate-files"
+	@echo "... gl3w_gen"
 	@echo "... uninstall"
 	@echo "... update_mappings"
 	@echo "... bmp_test"
 	@echo "... canvas"
-	@echo "... glad"
 	@echo "... glfw"
 	@echo "... window_test"
+	@echo "... deps/external/gl3w/src/gl3w.o"
+	@echo "... deps/external/gl3w/src/gl3w.i"
+	@echo "... deps/external/gl3w/src/gl3w.s"
 	@echo "... src/backgrounds.o"
 	@echo "... src/backgrounds.i"
 	@echo "... src/backgrounds.s"
@@ -503,9 +570,15 @@ help:
 	@echo "... src/geometry.o"
 	@echo "... src/geometry.i"
 	@echo "... src/geometry.s"
+	@echo "... src/glfwcanvas.o"
+	@echo "... src/glfwcanvas.i"
+	@echo "... src/glfwcanvas.s"
 	@echo "... src/windowcanvas.o"
 	@echo "... src/windowcanvas.i"
 	@echo "... src/windowcanvas.s"
+	@echo "... src/windowhandler.o"
+	@echo "... src/windowhandler.i"
+	@echo "... src/windowhandler.s"
 	@echo "... tests/bmp_test.o"
 	@echo "... tests/bmp_test.i"
 	@echo "... tests/bmp_test.s"

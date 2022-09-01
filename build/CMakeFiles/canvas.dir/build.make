@@ -73,85 +73,127 @@ CMakeFiles/canvas.dir/src/backgrounds.cpp.o: CMakeFiles/canvas.dir/flags.make
 CMakeFiles/canvas.dir/src/backgrounds.cpp.o: /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/backgrounds.cpp
 CMakeFiles/canvas.dir/src/backgrounds.cpp.o: CMakeFiles/canvas.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/canvas.dir/src/backgrounds.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/backgrounds.cpp.o -MF CMakeFiles/canvas.dir/src/backgrounds.cpp.o.d -o CMakeFiles/canvas.dir/src/backgrounds.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/backgrounds.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/backgrounds.cpp.o -MF CMakeFiles/canvas.dir/src/backgrounds.cpp.o.d -o CMakeFiles/canvas.dir/src/backgrounds.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/backgrounds.cpp
 
 CMakeFiles/canvas.dir/src/backgrounds.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canvas.dir/src/backgrounds.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/backgrounds.cpp > CMakeFiles/canvas.dir/src/backgrounds.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/backgrounds.cpp > CMakeFiles/canvas.dir/src/backgrounds.cpp.i
 
 CMakeFiles/canvas.dir/src/backgrounds.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canvas.dir/src/backgrounds.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/backgrounds.cpp -o CMakeFiles/canvas.dir/src/backgrounds.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/backgrounds.cpp -o CMakeFiles/canvas.dir/src/backgrounds.cpp.s
 
 CMakeFiles/canvas.dir/src/bmpcanvas.cpp.o: CMakeFiles/canvas.dir/flags.make
 CMakeFiles/canvas.dir/src/bmpcanvas.cpp.o: /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/bmpcanvas.cpp
 CMakeFiles/canvas.dir/src/bmpcanvas.cpp.o: CMakeFiles/canvas.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/canvas.dir/src/bmpcanvas.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/bmpcanvas.cpp.o -MF CMakeFiles/canvas.dir/src/bmpcanvas.cpp.o.d -o CMakeFiles/canvas.dir/src/bmpcanvas.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/bmpcanvas.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/bmpcanvas.cpp.o -MF CMakeFiles/canvas.dir/src/bmpcanvas.cpp.o.d -o CMakeFiles/canvas.dir/src/bmpcanvas.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/bmpcanvas.cpp
 
 CMakeFiles/canvas.dir/src/bmpcanvas.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canvas.dir/src/bmpcanvas.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/bmpcanvas.cpp > CMakeFiles/canvas.dir/src/bmpcanvas.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/bmpcanvas.cpp > CMakeFiles/canvas.dir/src/bmpcanvas.cpp.i
 
 CMakeFiles/canvas.dir/src/bmpcanvas.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canvas.dir/src/bmpcanvas.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/bmpcanvas.cpp -o CMakeFiles/canvas.dir/src/bmpcanvas.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/bmpcanvas.cpp -o CMakeFiles/canvas.dir/src/bmpcanvas.cpp.s
 
 CMakeFiles/canvas.dir/src/canvas.cpp.o: CMakeFiles/canvas.dir/flags.make
 CMakeFiles/canvas.dir/src/canvas.cpp.o: /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/canvas.cpp
 CMakeFiles/canvas.dir/src/canvas.cpp.o: CMakeFiles/canvas.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/canvas.dir/src/canvas.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/canvas.cpp.o -MF CMakeFiles/canvas.dir/src/canvas.cpp.o.d -o CMakeFiles/canvas.dir/src/canvas.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/canvas.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/canvas.cpp.o -MF CMakeFiles/canvas.dir/src/canvas.cpp.o.d -o CMakeFiles/canvas.dir/src/canvas.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/canvas.cpp
 
 CMakeFiles/canvas.dir/src/canvas.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canvas.dir/src/canvas.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/canvas.cpp > CMakeFiles/canvas.dir/src/canvas.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/canvas.cpp > CMakeFiles/canvas.dir/src/canvas.cpp.i
 
 CMakeFiles/canvas.dir/src/canvas.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canvas.dir/src/canvas.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/canvas.cpp -o CMakeFiles/canvas.dir/src/canvas.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/canvas.cpp -o CMakeFiles/canvas.dir/src/canvas.cpp.s
 
 CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o: CMakeFiles/canvas.dir/flags.make
 CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o: /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/framebuffercanvas.cpp
 CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o: CMakeFiles/canvas.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o -MF CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o.d -o CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/framebuffercanvas.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o -MF CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o.d -o CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/framebuffercanvas.cpp
 
 CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/framebuffercanvas.cpp > CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/framebuffercanvas.cpp > CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.i
 
 CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/framebuffercanvas.cpp -o CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/framebuffercanvas.cpp -o CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.s
 
 CMakeFiles/canvas.dir/src/geometry.cpp.o: CMakeFiles/canvas.dir/flags.make
 CMakeFiles/canvas.dir/src/geometry.cpp.o: /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/geometry.cpp
 CMakeFiles/canvas.dir/src/geometry.cpp.o: CMakeFiles/canvas.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/canvas.dir/src/geometry.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/geometry.cpp.o -MF CMakeFiles/canvas.dir/src/geometry.cpp.o.d -o CMakeFiles/canvas.dir/src/geometry.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/geometry.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/geometry.cpp.o -MF CMakeFiles/canvas.dir/src/geometry.cpp.o.d -o CMakeFiles/canvas.dir/src/geometry.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/geometry.cpp
 
 CMakeFiles/canvas.dir/src/geometry.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canvas.dir/src/geometry.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/geometry.cpp > CMakeFiles/canvas.dir/src/geometry.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/geometry.cpp > CMakeFiles/canvas.dir/src/geometry.cpp.i
 
 CMakeFiles/canvas.dir/src/geometry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canvas.dir/src/geometry.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/geometry.cpp -o CMakeFiles/canvas.dir/src/geometry.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/geometry.cpp -o CMakeFiles/canvas.dir/src/geometry.cpp.s
+
+CMakeFiles/canvas.dir/src/glfwcanvas.cpp.o: CMakeFiles/canvas.dir/flags.make
+CMakeFiles/canvas.dir/src/glfwcanvas.cpp.o: /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/glfwcanvas.cpp
+CMakeFiles/canvas.dir/src/glfwcanvas.cpp.o: CMakeFiles/canvas.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/canvas.dir/src/glfwcanvas.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/glfwcanvas.cpp.o -MF CMakeFiles/canvas.dir/src/glfwcanvas.cpp.o.d -o CMakeFiles/canvas.dir/src/glfwcanvas.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/glfwcanvas.cpp
+
+CMakeFiles/canvas.dir/src/glfwcanvas.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canvas.dir/src/glfwcanvas.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/glfwcanvas.cpp > CMakeFiles/canvas.dir/src/glfwcanvas.cpp.i
+
+CMakeFiles/canvas.dir/src/glfwcanvas.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canvas.dir/src/glfwcanvas.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/glfwcanvas.cpp -o CMakeFiles/canvas.dir/src/glfwcanvas.cpp.s
 
 CMakeFiles/canvas.dir/src/windowcanvas.cpp.o: CMakeFiles/canvas.dir/flags.make
 CMakeFiles/canvas.dir/src/windowcanvas.cpp.o: /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/windowcanvas.cpp
 CMakeFiles/canvas.dir/src/windowcanvas.cpp.o: CMakeFiles/canvas.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/canvas.dir/src/windowcanvas.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/windowcanvas.cpp.o -MF CMakeFiles/canvas.dir/src/windowcanvas.cpp.o.d -o CMakeFiles/canvas.dir/src/windowcanvas.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/windowcanvas.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/canvas.dir/src/windowcanvas.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/windowcanvas.cpp.o -MF CMakeFiles/canvas.dir/src/windowcanvas.cpp.o.d -o CMakeFiles/canvas.dir/src/windowcanvas.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/windowcanvas.cpp
 
 CMakeFiles/canvas.dir/src/windowcanvas.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canvas.dir/src/windowcanvas.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/windowcanvas.cpp > CMakeFiles/canvas.dir/src/windowcanvas.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/windowcanvas.cpp > CMakeFiles/canvas.dir/src/windowcanvas.cpp.i
 
 CMakeFiles/canvas.dir/src/windowcanvas.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canvas.dir/src/windowcanvas.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/windowcanvas.cpp -o CMakeFiles/canvas.dir/src/windowcanvas.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/windowcanvas.cpp -o CMakeFiles/canvas.dir/src/windowcanvas.cpp.s
+
+CMakeFiles/canvas.dir/src/windowhandler.cpp.o: CMakeFiles/canvas.dir/flags.make
+CMakeFiles/canvas.dir/src/windowhandler.cpp.o: /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/windowhandler.cpp
+CMakeFiles/canvas.dir/src/windowhandler.cpp.o: CMakeFiles/canvas.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/canvas.dir/src/windowhandler.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/canvas.dir/src/windowhandler.cpp.o -MF CMakeFiles/canvas.dir/src/windowhandler.cpp.o.d -o CMakeFiles/canvas.dir/src/windowhandler.cpp.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/windowhandler.cpp
+
+CMakeFiles/canvas.dir/src/windowhandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/canvas.dir/src/windowhandler.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/windowhandler.cpp > CMakeFiles/canvas.dir/src/windowhandler.cpp.i
+
+CMakeFiles/canvas.dir/src/windowhandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/canvas.dir/src/windowhandler.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/src/windowhandler.cpp -o CMakeFiles/canvas.dir/src/windowhandler.cpp.s
+
+CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.o: CMakeFiles/canvas.dir/flags.make
+CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.o: deps/external/gl3w/src/gl3w.c
+CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.o: CMakeFiles/canvas.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.o -MF CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.o.d -o CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.o -c /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/deps/external/gl3w/src/gl3w.c
+
+CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.i"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/deps/external/gl3w/src/gl3w.c > CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.i
+
+CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.s"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/deps/external/gl3w/src/gl3w.c -o CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.s
 
 # Object files for target canvas
 canvas_OBJECTS = \
@@ -160,7 +202,10 @@ canvas_OBJECTS = \
 "CMakeFiles/canvas.dir/src/canvas.cpp.o" \
 "CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o" \
 "CMakeFiles/canvas.dir/src/geometry.cpp.o" \
-"CMakeFiles/canvas.dir/src/windowcanvas.cpp.o"
+"CMakeFiles/canvas.dir/src/glfwcanvas.cpp.o" \
+"CMakeFiles/canvas.dir/src/windowcanvas.cpp.o" \
+"CMakeFiles/canvas.dir/src/windowhandler.cpp.o" \
+"CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.o"
 
 # External object files for target canvas
 canvas_EXTERNAL_OBJECTS =
@@ -170,10 +215,13 @@ libcanvas.a: CMakeFiles/canvas.dir/src/bmpcanvas.cpp.o
 libcanvas.a: CMakeFiles/canvas.dir/src/canvas.cpp.o
 libcanvas.a: CMakeFiles/canvas.dir/src/framebuffercanvas.cpp.o
 libcanvas.a: CMakeFiles/canvas.dir/src/geometry.cpp.o
+libcanvas.a: CMakeFiles/canvas.dir/src/glfwcanvas.cpp.o
 libcanvas.a: CMakeFiles/canvas.dir/src/windowcanvas.cpp.o
+libcanvas.a: CMakeFiles/canvas.dir/src/windowhandler.cpp.o
+libcanvas.a: CMakeFiles/canvas.dir/deps/external/gl3w/src/gl3w.c.o
 libcanvas.a: CMakeFiles/canvas.dir/build.make
 libcanvas.a: CMakeFiles/canvas.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libcanvas.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alex/programming/c++/coding4-jenny/hw1/deps/canvas/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libcanvas.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/canvas.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/canvas.dir/link.txt --verbose=$(VERBOSE)
 
