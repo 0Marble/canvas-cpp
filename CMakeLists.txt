@@ -11,8 +11,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 enable_testing()
 
-    add_subdirectory(deps/external/glfw)
-    add_subdirectory(deps/external/gl3w)
+    add_subdirectory(deps/glfw)
+    add_subdirectory(deps/gl3w)
     
     target_link_libraries(${PROJECT_NAME} PUBLIC glfw gl3w)
 
