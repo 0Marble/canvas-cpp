@@ -1,3 +1,0 @@
-canvas_window_test 32 0.689979
-canvas_bmp_test 37 0.000857804
----
