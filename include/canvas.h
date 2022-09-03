@@ -20,26 +20,26 @@
 #define WHERE __func__ << " @ " __FILE__ ":" << __LINE__
 #define DEBUG_BREAK __builtin_trap();
 
-#define INDEX_GET(res, vec, index)                                            \
-  {                                                                           \
-    size_t computed_index = y * width + x;                                    \
-    if (computed_index >= pixels.size()) {                                    \
-      std::cerr << WHERE << " About to segfault! Index is " << computed_index \
-                << ", size is " << pixels.size() << "\n";                     \
-      DEBUG_BREAK;                                                            \
-    }                                                                         \
-    res = pixels[computed_index];                                             \
+#define INDEX_GET(res, vec, index)                                   \
+  {                                                                  \
+    size_t computed_index = index;                                   \
+    if (computed_index >= vec.size()) {                              \
+      std::cerr << WHERE << " Index " #index " = " << computed_index \
+                << ", size is " << vec.size() << "\n";               \
+      DEBUG_BREAK;                                                   \
+    }                                                                \
+    res = vec[computed_index];                                       \
   }
 
-#define INDEX_SET(vec, index, value)                                          \
-  {                                                                           \
-    size_t computed_index = y * width + x;                                    \
-    if (computed_index >= pixels.size()) {                                    \
-      std::cerr << WHERE << " About to segfault! Index is " << computed_index \
-                << ", size is " << pixels.size() << "\n";                     \
-      DEBUG_BREAK;                                                            \
-    }                                                                         \
-    pixels[computed_index] = value;                                           \
+#define INDEX_SET(vec, index, value)                                 \
+  {                                                                  \
+    size_t computed_index = index;                                   \
+    if (computed_index >= vec.size()) {                              \
+      std::cerr << WHERE << " Index " #index " = " << computed_index \
+                << ", size is " << vec.size() << "\n";               \
+      DEBUG_BREAK;                                                   \
+    }                                                                \
+    vec[computed_index] = value;                                     \
   }
 
 #define UNWRAP(var, into)                                   \
